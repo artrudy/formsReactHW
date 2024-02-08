@@ -1,0 +1,57 @@
+main {
+    width: min(70ch, 100% - 2rem);
+    margin-inline: auto;
+}
+
+form>*+* {
+    margin-block-start: 1.5rem;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+
+    .error-message {
+        visibility: hidden;
+        margin: 0;
+        color: darkred;
+        font-weight: 600;
+        font-size: 0.8rem;
+        white-space: pre;
+    }
+
+    &[data-haserror=true] .error-message {
+        visibility: visible;
+    }
+}
+
+.text-field {
+    border: 1px solid currentColor;
+    border-radius: 6px;
+}
+
+.special-input {
+    background: red;
+}
+
+.expertise-entry {
+    display: flex;
+    align-items: center;
+
+    .form-field {
+        flex: 1;
+    }
+
+    >button {
+        margin-top: 0.2rem;
+    }
+}
+
+.cluster {
+    display: flex;
+    flex-wrap: wrap;
+
+    &--right {
+        justify-content: flex-end;
+    }
+}
